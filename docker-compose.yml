@@ -1,9 +1,15 @@
-version: "3"
+www:
+    image: nginx
+    restart: always
+    ports:
+        - 80:80
+    volumes:
+        - /home/hgauna/devs/xDevsAcademy/docker_composer/docker-compose:/usr/share/nginx/html:ro
 
-services:
-    client:
-        image: nginx
-        ports:
-            - 80:80
-        volumes:
-            - .:/usr/share/nginx/html
+
+# web:
+#   image: nginx
+#   volumes:
+#    - .:/etc/nginx/html
+#   ports:
+#    - 80:80
